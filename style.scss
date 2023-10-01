@@ -1,0 +1,115 @@
+@import'variables';
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: $black;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+%btn-blue{
+    // width: 180px;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: $font-size-m;
+    font-weight: $font-weight-l;
+    color: $white;
+    background-color: #35a1b8;
+    transition: background-color .3s ease-in-out;
+    cursor: pointer;
+}
+
+%btn-blue:hover{
+    background-color: #68a9b7;
+}
+
+.header{
+    padding: 1px;
+}
+
+.line-h{
+    width: 1px;
+    height: 100px;
+    background-color: $black;
+}
+
+.nav{
+    margin-top: 12px;
+    > *{
+        margin: 0;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left-nav{
+        display: flex;
+        justify-content: space-around;
+       > *{
+        margin: 0 35px;
+       }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .nav-img{
+        width:250px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+}
+.right-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+
+.hambuger-btn{
+    border: none;
+    background-color: $white;
+    font-size:25px;
+   
+}
+
+
+.h-btn{
+    margin-left: 50px !important;
+  
+}
+
+.r-btn{
+    @extend %btn-blue;
+
+}
+
+.btn-search{
+    @extend %btn-blue;
+    border-radius: 100%;
+    font-size: 20px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:50px;
+    margin-left: 15px;
+}
