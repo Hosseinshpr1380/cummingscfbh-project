@@ -37,10 +37,6 @@ button{
     background-color: #68a9b7;
 }
 
-.header{
-    padding: 1px;
-}
-
 .line-h{
     width: 1px;
     height: 100px;
@@ -88,7 +84,7 @@ button{
     border: none;
     background-color: $white;
     font-size:25px;
-   
+     background-color: rgba($color: #000000, $alpha: 0);
 }
 
 
@@ -112,4 +108,101 @@ button{
     align-items: center;
     margin-right:50px;
     margin-left: 15px;
+}
+
+
+.header{
+    padding: 1px;
+    background-image: url(../img/header/PoliceHeaderBlendSmall.webp);
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    background-position: 100% 0;
+}
+
+.header-banner{
+
+    padding: 130px 100px;
+  
+    h1{
+        font-size: $font-size-l + 42px;
+        width: 80%;
+        color: #00416b;
+
+    }
+
+    .btn-banner{
+        @extend %btn-blue;
+        padding: 25px 40px;
+        border-radius: 50px;
+    }
+}
+
+
+@media (max-width:699.99px) {
+    .line-h{
+        display: none !important;
+    }
+    .nav-img{
+        margin: 0 !important;
+    }
+    .h-btn{
+        margin-left: 0 !important;
+        margin-right: 10px !important;
+    }
+    .btn-search{
+        margin-right: 5px;
+    }
+    .nav-img{
+        width: 180px !important;
+    }
+    .r-btn{
+        font-size: $font-size-s;
+    }
+}
+
+
+@media (max-width:999.99px) {
+    .header-banner{
+        width: 100%;
+        h1{
+            font-size: $font-size-l + 20px;
+            width: 100% !important;
+        }
+    }
+
+    .header{
+      
+       
+        height: 700px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+    }
+}
+
+@media (max-width:699.99px) {
+    .header-banner{
+       padding: 80px;
+     
+       text-align: center !important;
+       h1{
+        font-size: $font-size-l;
+       }
+       .btn-banner{
+        @extend %btn-blue;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-size: 15px;
+    }
+    }
+    .header{
+      
+       
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+    }
+
 }
