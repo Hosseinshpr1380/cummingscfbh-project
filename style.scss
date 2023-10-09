@@ -206,3 +206,539 @@ button{
     }
 
 }
+
+
+//sidbar section
+
+
+.sidebar {
+    background-color: #1a1a1a;
+    width: 320px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    // overflow: scroll;
+    * {
+        color: #abaaa8;
+        list-style: none;
+    }
+
+    >section {
+        margin-top: 65px;
+    }
+}
+
+.close-button {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    font-size: $font-size-l + 10px;
+    font-weight: 600;
+}
+
+.sidebar-item {
+
+    opacity: 0;
+    border-top: 1px solid #3f3e3e;
+
+    >button {
+        padding: 25px;
+        font-size: $font-size-l - 1px;
+        font-weight: 600 !important;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    >button:hover {
+        background-color: #000000 !important;
+
+    }
+
+    >button:hover * {
+        color: $white;
+    }
+
+    >ul {
+        margin: 0;
+        padding: 15px 0 15px 25px;
+    }
+
+    >ul:hover {
+        background-color: #000000;
+
+    }
+
+    >ul:hover {
+        color: $white;
+    }
+
+}
+
+.side-bar-list {
+    background-color: #000000;
+    padding: 15px 0;
+
+    span {
+        display: inline-block;
+        margin: 15px;
+    }
+
+    ul {
+        margin: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+
+            a {
+                font-size: $font-size-s + 3px;
+                font-weight: 700;
+            }
+
+            svg {
+                width: 15px;
+                margin-left: 5px;
+            }
+        }
+
+        li:hover * {
+            color: $white;
+        }
+    }
+}
+
+.media:hover {
+    background-color: #1a1a1a !important;
+}
+
+.media {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0px !important;
+
+    li {
+        cursor: pointer;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #222222;
+        transition: background-color .3s;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                color: $white;
+            }
+        }
+    }
+
+    li:hover {
+        background-color: #35a1b8;
+    }
+}
+
+.side-bar-list {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .6s;
+}
+
+.active {
+    position: relative;
+    transition: opacity .3s;
+}
+
+.active::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($color: #000000, $alpha: .2);
+    z-index: 1;
+    z-index: 10000;
+
+}
+
+.sidebar {
+    width: 0;
+    overflow: hidden;
+    transition: width .5s ease-in-out;
+    z-index: 100000;
+}
+
+nav {
+    transition: all .5s ease-in-out;
+    height: 110px;
+    z-index: 1000;
+}
+
+.left-nav {
+    height: 100%;
+    align-items: center;
+}
+
+.btn-search {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.arrow {
+    transition: transform .6s;
+}
+
+.active2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    height: 130px;
+    background-color: $white;
+
+}
+
+.text-title {
+    font-size: $font-size-l + 33px;
+    font-weight: 700;
+    color: #00416b;
+    position: relative;
+    padding: 0 0 50px 0;
+}
+
+.text-title::after {
+    content: "";
+    height: 3px;
+    width: 70px;
+    background-color: #35a1b8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+//main section
+
+.Psychology {
+    padding: 150px 0;
+    // background-image: url(../img/main/Oval-Copy-5-e1622730147650.png);
+    // background-position: top center;
+    // background-repeat: no-repeat;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: stretch;
+
+}
+
+.Psychology-img {
+    margin: 0 20px;
+    width: 650px;
+    z-index: 1;
+    position: relative;
+    img {
+        width: 100%;
+        border-radius: 100px;
+    }
+}
+
+.Psychology-text {
+   
+    width: 450px;
+    margin: 0 20px;
+
+    position: relative;
+
+
+
+    h1 {
+        margin: 0;
+
+
+    }
+
+    p {
+        margin: 25px 0;
+        font-size: $font-size-l - 2px;
+        font-weight: $font-weight-l;
+    }
+
+    button {
+        @extend %btn-blue;
+    }
+
+    img{
+        width: 120%;
+        height: 600px;
+        position: absolute;
+        top: -100px;
+        left: -55px;
+        z-index: -100;
+    }
+
+}
+
+.bg-img {
+    z-index: -100;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width:999.99px) {
+
+    .Psychology {
+        flex-direction: column;
+        padding: 100px 0;
+    }
+
+    .Psychology-img {
+        width: 80%;
+        margin: 10px auto;
+
+    }
+
+    .Psychology-text {
+        width: 80%;
+        margin: 10px auto;
+
+        h1 {
+            font-size: $font-size-l + 20px;
+        }
+    }
+
+}
+
+
+.delivering {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+
+    background-image: url(../img/main/delivering/Oval.png);
+    background-position: center 0;
+    background-size: 1000px 800px;
+    background-repeat: no-repeat;
+}
+
+.delivering-title {
+    margin-bottom: 80px;
+    margin-right: 200px;
+
+    p {
+        margin: 25px 0;
+        font-size: $font-size-l - 2px;
+        font-weight: $font-weight-l;
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+}
+
+.delivering-img {
+    width: 700px;
+    position: relative;
+    margin-bottom: 70px;
+    margin-right: 200px;
+    img:first-child {
+        width: 100%;
+        border-radius: 100px;
+    }
+
+
+    .delivering-img-2 {
+        width: 300px;
+        border-radius: 100px;
+        position: absolute;
+        top: -100px;
+        right: -150px;
+    }
+}
+
+.delivering-text{
+    text-align: center;
+
+    background-image: url(../img/main/delivering/quote.webp);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center 0;
+
+    p:first-child{
+        position: relative;
+        padding: 25px 0;
+        margin-bottom: 35px;
+        margin: 25px 0;
+        font-size: $font-size-l;
+        font-weight: 500;
+    }
+
+    p:first-child::after{
+        content: "";
+        height: 3px;
+        width: 70px;
+        background-color: #35a1b8;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+       right: 0;
+        margin: auto;
+
+    }
+
+    p:nth-child(2){
+        margin: 20px 0;
+        font-size: $font-size-l;
+        font-weight: $font-weight-l;
+    }
+
+    span{
+        font-weight: 550;
+        a{
+            color: #35a1b8;
+            transition:color .3s;
+        }
+        a:hover{
+            color: #0056b3;
+        }
+    }
+}
+
+
+@media (max-width:899.99px) {
+    .delivering-img {
+        width: 550px;
+        position: relative;
+        margin-bottom: 70px;
+        margin-right:0;
+        img:first-child {
+            width: 100%;
+            border-radius:90px;
+        }
+    
+    
+        .delivering-img-2 {
+            width: 200px;
+            border-radius: 70px;
+            position: absolute;
+            top: -100px;
+            right: -50px;
+        }
+    }
+    .delivering-title {
+        margin-bottom: 80px;
+        margin-right: 0;
+    
+        p {
+            margin: 25px 0;
+            font-size: $font-size-l - 2px;
+            font-weight: $font-weight-l;
+        }
+    
+        h1 {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+@media (max-width:669.99px) {
+    .delivering-img {
+      
+        width: 90%;
+        margin:0 auto 70px auto;
+        img:first-child {
+            width: 100%;
+            border-radius:90px;
+        }
+    
+    
+        .delivering-img-2 {
+           display: none;
+        }
+    }
+    .delivering-title {
+
+        text-align: center;
+
+        .text-title::after{
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        p {
+            margin: 25px 0;
+            font-size: $font-size-l - 2px;
+            font-weight: $font-weight-l;
+        }
+    
+        h1 {
+            font-size: $font-size-l + 8px !important;
+        }
+    }
+}
+
+.help{
+    padding: 100px 0;
+    text-align: center;
+    background-image: url(../img/main/delivering/We_Believe_Oval.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 80px 0;
+}
+
+
+.help-title{
+    h1{
+        margin: 0;
+        margin-bottom: 30px;
+        text-align: center;
+        padding: 25px 0;
+    }
+    .text-title::after{
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    P{
+        line-height: 28px;
+        font-size: $font-size-l - 2px;
+        font-weight: $font-weight-m;
+        a{
+            color: #35a1b8;
+            transition: color .3s ease-in-out;
+        }
+        a:hover{
+            color: #0056b3;
+        }
+    }
+}
