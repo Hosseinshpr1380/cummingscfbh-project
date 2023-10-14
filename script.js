@@ -122,3 +122,23 @@ window.addEventListener('resize',function(){
      
     }
 })
+
+
+function helpbtn(d,a){
+    
+
+    if(document.getElementsByClassName("help-btn-text")[d].getElementsByTagName('p')[0].classList.contains('openli')){
+       
+        document.getElementsByClassName("help-btn-text")[d].getElementsByTagName('p')[0].classList.remove('openli');
+
+        a.getElementsByTagName('i')[0].style.transform="rotateZ(0deg)";
+    }
+    else{
+        document.getElementsByClassName("help-btn-text")[d].getElementsByTagName('p')[0].classList.add('openli');
+    //    document.getElementsByClassName('help-btn')[d].getElementsByTagName('button')[0].getElementsByTagName('i')[0].style.transform="rotateZ(180deg)"
+        a.getElementsByTagName('i')[0].style.transform="rotateZ(180deg)";
+        console.log(a.getElementsByTagName('i'))
+    }
+   console.log(document.getElementsByClassName("help-btn-text")[0].getElementsByTagName('p')[0])
+}
+
